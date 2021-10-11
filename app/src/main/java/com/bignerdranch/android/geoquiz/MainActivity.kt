@@ -28,12 +28,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         trueButton = findViewById(R.id.true_button)
         falseButton = findViewById(R.id.false_button)
         nextButton = findViewById(R.id.next_button)
         questionTextView = findViewById(R.id.question_text_view)
-
         trueButton.setOnClickListener { view: View ->
             checkAnswer(true)
         }
@@ -41,7 +39,6 @@ class MainActivity : AppCompatActivity() {
         falseButton.setOnClickListener { view: View ->
             checkAnswer(false)
         }
-
         nextButton.setOnClickListener {
             currentIndex = (currentIndex + 1) % questionBank.size
             updateQuestion()
@@ -66,3 +63,5 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 }
+
+
